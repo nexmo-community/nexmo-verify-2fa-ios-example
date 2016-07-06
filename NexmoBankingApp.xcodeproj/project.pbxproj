@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F0296861D078BF300E75CF4 /* SitekeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0296851D078BF300E75CF4 /* SitekeyViewController.swift */; };
+		1F1943061D00088000E71917 /* nexmo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1943051D00088000E71917 /* nexmo.png */; };
+		1F2FD7771C569E5800C0783D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2FD7751C569E5800C0783D /* Bolts.framework */; };
+		1F2FD7781C569E5800C0783D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2FD7761C569E5800C0783D /* Parse.framework */; };
+		1F2FD7851C569ED600C0783D /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2FD7791C569ED500C0783D /* Accounts.framework */; };
+		1F2FD7861C569ED600C0783D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2FD77A1C569ED600C0783D /* AudioToolbox.framework */; };
+		1F2FD7871C569ED600C0783D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2FD77B1C569ED600C0783D /* CFNetwork.framework */; };
+		1F2FD7881C569ED600C0783D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2FD77C1C569ED600C0783D /* CoreGraphics.framework */; };
+		1F2FD7891C569ED600C0783D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2FD77D1C569ED600C0783D /* CoreLocation.framework */; };
+		1F2FD78A1C569ED600C0783D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2FD77E1C569ED600C0783D /* libsqlite3.tbd */; };
+		1F2FD78B1C569ED600C0783D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2FD77F1C569ED600C0783D /* libz.tbd */; };
+		1F2FD78C1C569ED600C0783D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2FD7801C569ED600C0783D /* QuartzCore.framework */; };
+		1F2FD78D1C569ED600C0783D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2FD7811C569ED600C0783D /* Security.framework */; };
+		1F2FD78E1C569ED600C0783D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2FD7821C569ED600C0783D /* Social.framework */; };
+		1F2FD78F1C569ED600C0783D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2FD7831C569ED600C0783D /* StoreKit.framework */; };
+		1F2FD7901C569ED600C0783D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F2FD7841C569ED600C0783D /* SystemConfiguration.framework */; };
+		1F4A85201C53063A00C6ACA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4A851F1C53063A00C6ACA1 /* AppDelegate.swift */; };
+		1F4A85221C53063A00C6ACA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4A85211C53063A00C6ACA1 /* ViewController.swift */; };
+		1F4A85251C53063A00C6ACA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4A85231C53063A00C6ACA1 /* Main.storyboard */; };
+		1F4A85271C53063A00C6ACA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4A85261C53063A00C6ACA1 /* Assets.xcassets */; };
+		1F4A852A1C53063A00C6ACA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4A85281C53063A00C6ACA1 /* LaunchScreen.storyboard */; };
+		1F5284AD1C5356DE00CA09A1 /* StatementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5284AC1C5356DE00CA09A1 /* StatementViewController.swift */; };
+		1F56EAD11C5F370E004BA407 /* ForgotUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F56EAD01C5F370E004BA407 /* ForgotUsernameViewController.swift */; };
+		1F6C9C2C1CA3C221004B893E /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6C9C2B1CA3C221004B893E /* TransferViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1F77B72D1C7ACA60005AED7A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1F0296851D078BF300E75CF4 /* SitekeyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SitekeyViewController.swift; sourceTree = "<group>"; };
+		1F1943051D00088000E71917 /* nexmo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nexmo.png; sourceTree = "<group>"; };
+		1F2FD7751C569E5800C0783D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		1F2FD7761C569E5800C0783D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		1F2FD7791C569ED500C0783D /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		1F2FD77A1C569ED600C0783D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1F2FD77B1C569ED600C0783D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1F2FD77C1C569ED600C0783D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1F2FD77D1C569ED600C0783D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1F2FD77E1C569ED600C0783D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		1F2FD77F1C569ED600C0783D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		1F2FD7801C569ED600C0783D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1F2FD7811C569ED600C0783D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1F2FD7821C569ED600C0783D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		1F2FD7831C569ED600C0783D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1F2FD7841C569ED600C0783D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1F4A851C1C53063A00C6ACA1 /* NexmoBankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NexmoBankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F4A851F1C53063A00C6ACA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F4A85211C53063A00C6ACA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F4A85241C53063A00C6ACA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F4A85261C53063A00C6ACA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F4A85291C53063A00C6ACA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F4A852B1C53063A00C6ACA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F5284AC1C5356DE00CA09A1 /* StatementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatementViewController.swift; sourceTree = "<group>"; };
+		1F56EAD01C5F370E004BA407 /* ForgotUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotUsernameViewController.swift; sourceTree = "<group>"; };
+		1F6C9C2B1CA3C221004B893E /* TransferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F4A85191C53063A00C6ACA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F2FD7851C569ED600C0783D /* Accounts.framework in Frameworks */,
+				1F2FD7861C569ED600C0783D /* AudioToolbox.framework in Frameworks */,
+				1F2FD7871C569ED600C0783D /* CFNetwork.framework in Frameworks */,
+				1F2FD7881C569ED600C0783D /* CoreGraphics.framework in Frameworks */,
+				1F2FD7891C569ED600C0783D /* CoreLocation.framework in Frameworks */,
+				1F2FD78A1C569ED600C0783D /* libsqlite3.tbd in Frameworks */,
+				1F2FD78B1C569ED600C0783D /* libz.tbd in Frameworks */,
+				1F2FD78C1C569ED600C0783D /* QuartzCore.framework in Frameworks */,
+				1F2FD78D1C569ED600C0783D /* Security.framework in Frameworks */,
+				1F2FD78E1C569ED600C0783D /* Social.framework in Frameworks */,
+				1F2FD78F1C569ED600C0783D /* StoreKit.framework in Frameworks */,
+				1F2FD7901C569ED600C0783D /* SystemConfiguration.framework in Frameworks */,
+				1F2FD7781C569E5800C0783D /* Parse.framework in Frameworks */,
+				1F2FD7771C569E5800C0783D /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F2FD7671C569BE200C0783D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F2FD7791C569ED500C0783D /* Accounts.framework */,
+				1F2FD77A1C569ED600C0783D /* AudioToolbox.framework */,
+				1F2FD77B1C569ED600C0783D /* CFNetwork.framework */,
+				1F2FD77C1C569ED600C0783D /* CoreGraphics.framework */,
+				1F2FD77D1C569ED600C0783D /* CoreLocation.framework */,
+				1F2FD77E1C569ED600C0783D /* libsqlite3.tbd */,
+				1F2FD77F1C569ED600C0783D /* libz.tbd */,
+				1F2FD7801C569ED600C0783D /* QuartzCore.framework */,
+				1F2FD7811C569ED600C0783D /* Security.framework */,
+				1F2FD7821C569ED600C0783D /* Social.framework */,
+				1F2FD7831C569ED600C0783D /* StoreKit.framework */,
+				1F2FD7841C569ED600C0783D /* SystemConfiguration.framework */,
+				1F2FD7751C569E5800C0783D /* Bolts.framework */,
+				1F2FD7761C569E5800C0783D /* Parse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F4A85131C53063A00C6ACA1 = {
+			isa = PBXGroup;
+			children = (
+				1F4A851E1C53063A00C6ACA1 /* NexmoBankingApp */,
+				1F4A851D1C53063A00C6ACA1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F4A851D1C53063A00C6ACA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F4A851C1C53063A00C6ACA1 /* NexmoBankingApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F4A851E1C53063A00C6ACA1 /* NexmoBankingApp */ = {
+			isa = PBXGroup;
+			children = (
+				1F1943051D00088000E71917 /* nexmo.png */,
+				1F6C9C2B1CA3C221004B893E /* TransferViewController.swift */,
+				1F5284AC1C5356DE00CA09A1 /* StatementViewController.swift */,
+				1F4A851F1C53063A00C6ACA1 /* AppDelegate.swift */,
+				1F4A85211C53063A00C6ACA1 /* ViewController.swift */,
+				1F4A85231C53063A00C6ACA1 /* Main.storyboard */,
+				1F56EAD01C5F370E004BA407 /* ForgotUsernameViewController.swift */,
+				1F0296851D078BF300E75CF4 /* SitekeyViewController.swift */,
+				1F4A85261C53063A00C6ACA1 /* Assets.xcassets */,
+				1F4A85281C53063A00C6ACA1 /* LaunchScreen.storyboard */,
+				1F4A852B1C53063A00C6ACA1 /* Info.plist */,
+				1F2FD7671C569BE200C0783D /* Frameworks */,
+			);
+			path = NexmoBankingApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F4A851B1C53063A00C6ACA1 /* NexmoBankingApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F4A852E1C53063A00C6ACA1 /* Build configuration list for PBXNativeTarget "NexmoBankingApp" */;
+			buildPhases = (
+				1F4A85181C53063A00C6ACA1 /* Sources */,
+				1F4A85191C53063A00C6ACA1 /* Frameworks */,
+				1F4A851A1C53063A00C6ACA1 /* Resources */,
+				1F77B72D1C7ACA60005AED7A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NexmoBankingApp;
+			productName = NexmoBankingApp;
+			productReference = 1F4A851C1C53063A00C6ACA1 /* NexmoBankingApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F4A85141C53063A00C6ACA1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Sidharth Sharma";
+				TargetAttributes = {
+					1F4A851B1C53063A00C6ACA1 = {
+						CreatedOnToolsVersion = 7.1.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 1F4A85171C53063A00C6ACA1 /* Build configuration list for PBXProject "NexmoBankingApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F4A85131C53063A00C6ACA1;
+			productRefGroup = 1F4A851D1C53063A00C6ACA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F4A851B1C53063A00C6ACA1 /* NexmoBankingApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F4A851A1C53063A00C6ACA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F4A852A1C53063A00C6ACA1 /* LaunchScreen.storyboard in Resources */,
+				1F4A85271C53063A00C6ACA1 /* Assets.xcassets in Resources */,
+				1F4A85251C53063A00C6ACA1 /* Main.storyboard in Resources */,
+				1F1943061D00088000E71917 /* nexmo.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F4A85181C53063A00C6ACA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5284AD1C5356DE00CA09A1 /* StatementViewController.swift in Sources */,
+				1F56EAD11C5F370E004BA407 /* ForgotUsernameViewController.swift in Sources */,
+				1F6C9C2C1CA3C221004B893E /* TransferViewController.swift in Sources */,
+				1F4A85221C53063A00C6ACA1 /* ViewController.swift in Sources */,
+				1F4A85201C53063A00C6ACA1 /* AppDelegate.swift in Sources */,
+				1F0296861D078BF300E75CF4 /* SitekeyViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F4A85231C53063A00C6ACA1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F4A85241C53063A00C6ACA1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F4A85281C53063A00C6ACA1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F4A85291C53063A00C6ACA1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F4A852C1C53063A00C6ACA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F4A852D1C53063A00C6ACA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F4A852F1C53063A00C6ACA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)/",
+					"$(PROJECT_DIR)/NexmoBankingApp/parse-library-1.12.0",
+					"$(PROJECT_DIR)/NexmoBankingApp",
+				);
+				INFOPLIST_FILE = NexmoBankingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nexmo.sample.NexmoBankingApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+			};
+			name = Debug;
+		};
+		1F4A85301C53063A00C6ACA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)/",
+					"$(PROJECT_DIR)/NexmoBankingApp/parse-library-1.12.0",
+					"$(PROJECT_DIR)/NexmoBankingApp",
+				);
+				INFOPLIST_FILE = NexmoBankingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nexmo.sample.NexmoBankingApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F4A85171C53063A00C6ACA1 /* Build configuration list for PBXProject "NexmoBankingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F4A852C1C53063A00C6ACA1 /* Debug */,
+				1F4A852D1C53063A00C6ACA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F4A852E1C53063A00C6ACA1 /* Build configuration list for PBXNativeTarget "NexmoBankingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F4A852F1C53063A00C6ACA1 /* Debug */,
+				1F4A85301C53063A00C6ACA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F4A85141C53063A00C6ACA1 /* Project object */;
+}
