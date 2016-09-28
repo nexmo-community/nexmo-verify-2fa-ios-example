@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7BCA293CD80B8E984C4A37028FE893399214D841",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CE087E07D57661612519BF053C6BEF980C143055" : 9223372036854775807,
+    "7BCA293CD80B8E984C4A37028FE893399214D841" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E1BC8666-E855-43EA-8741-9AD7CC80B025",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CE087E07D57661612519BF053C6BEF980C143055" : "nexmo-verify-2fa-ios-example\/verify-ios-sdk\/",
+    "7BCA293CD80B8E984C4A37028FE893399214D841" : "nexmo-verify-2fa-ios-example\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NexmoBankingApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "NexmoBankingApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nexmo-community\/nexmo-verify-2fa-ios-example.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7BCA293CD80B8E984C4A37028FE893399214D841"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nexmo\/verify-ios-sdk",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CE087E07D57661612519BF053C6BEF980C143055"
+    }
+  ]
+}
