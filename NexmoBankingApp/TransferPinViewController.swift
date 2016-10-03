@@ -48,9 +48,8 @@ class TransferPinViewController:UIViewController {
     }
     
     func verify() {
-        VerifyClient.verifyStandalone(countryCode: "US", phoneNumber: PFUser.currentUser()!["phoneNumber"]! as! String,
+        VerifyClient.getVerifiedUser(countryCode: "US", phoneNumber: PFUser.currentUser()!["phoneNumber"] as! String,
             onVerifyInProgress: {
-                print("Verification Started")
             },
             onUserVerified: {
                 self.performTransfer()
@@ -60,14 +59,15 @@ class TransferPinViewController:UIViewController {
                 let defaultAction = UIAlertAction(title: "Goodbye", style: .Default) {
                     UIAlertAction in
                     VerifyClient.cancelVerification() { error in
-                        if let _ = error {
+                        if let error = error {
+                        // something wen't wrong whilst attempting to cancel the current verification request
                             return
                         }
                     }
                     self.performSegueWithIdentifier("logout", sender: self)
                 }
-            alert.addAction(defaultAction)
-            self.presentViewController(alert, animated: true, completion: nil)
+                alert.addAction(defaultAction)
+                self.presentViewController(alert, animated: true, completion: nil)
         })
     }
     
