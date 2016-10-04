@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.onlineID.delegate = self
+        /* signUpDemoAccount() //Uncomment to create dummy user */
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -26,4 +27,29 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return false
     }
+    
+    func signUpDemoAccount() {
+        var user = PFUser()
+        user.username = "ENTERUSERNAME"
+        user.password = "ENTERPASSWORD"
+        user.email = "ENTEREMAILADDRESS@DEMO.NET"
+        user["phoneNumber"] = "ENTER-YOUR-PHONE-HERE"
+        user["smsVerification"] = false
+        user["checkingAccount"] = 5000
+        user["savingAccount"] = 10000
+        let sitekeyImage = UIImage(named: "nexmo.png")
+        let imageData = UIImagePNGRepresentation(sitekeyImage!)
+        let imageFile = PFFile(name:"nexmo.png", data:imageData!)
+        user["sitekey"] = imageFile
+        user.signUpInBackgroundWithBlock {
+            (succeeded: Bool, error: NSError?) -> Void in
+            if let error = error {
+                let errorstring = error.userInfo["error"] as? NSString
+                print(errorstring)
+            } else {
+                print("User signed up.")
+            }
+        }
+    }
+
 }
