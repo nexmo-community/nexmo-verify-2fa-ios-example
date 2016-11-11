@@ -4,31 +4,31 @@ import Parse
 
 class StatementViewController: UIViewController {
     
-    @IBAction func billPay(sender: AnyObject) { //UI Placeholder
+    @IBAction func billPay(_ sender: AnyObject) { //UI Placeholder
         print("billpay")
         let alert = UIAlertView()
         alert.title = "Incorrect Choice"
         alert.message = "The selection you have selected has not been configured with this demo application."
-        alert.addButtonWithTitle("Back")
+        alert.addButton(withTitle: "Back")
         alert.show()
     }
     
-    @IBAction func deposits(sender: AnyObject) { //UI Placeholder
+    @IBAction func deposits(_ sender: AnyObject) { //UI Placeholder
         print("deposits")
         let alert = UIAlertView()
         alert.title = "Incorrect Choice"
         alert.message = "The selection you have selected has not been configured with this demo application."
-        alert.addButtonWithTitle("Back")
+        alert.addButton(withTitle: "Back")
         alert.show()
     }
     
-    @IBAction func logoutUser(sender: AnyObject) {
+    @IBAction func logoutUser(_ sender: AnyObject) {
         logout() 
-        self.performSegueWithIdentifier("logoutUser", sender: self)
+        self.performSegue(withIdentifier: "logoutUser", sender: self)
     }
   
-    @IBAction func transfer(sender: AnyObject) {
-        self.performSegueWithIdentifier("transferSegue", sender: self)
+    @IBAction func transfer(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: "transferSegue", sender: self)
     }
     
     @IBOutlet weak var checkingAmount: UILabel!
@@ -40,12 +40,12 @@ class StatementViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkingAmount.text = "$\(String(Double(round(100*(PFUser.currentUser()!["checking"] as! Double))/100)))"
-        savingAmount.text = "$\(String(Double(round(100*(PFUser.currentUser()!["saving"] as! Double))/100)))"
+        checkingAmount.text = "$\(String(Double(round(100*(PFUser.current()!["checking"] as! Double))/100)))"
+        savingAmount.text = "$\(String(Double(round(100*(PFUser.current()!["saving"] as! Double))/100)))"
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         
     }
 }

@@ -6,17 +6,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var onlineID: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    @IBAction func signIn(sender: AnyObject) {
-        PFUser.logInWithUsernameInBackground(onlineID.text!, password:password.text!) {
-            (user: PFUser?, error: NSError?) -> Void in
+    @IBAction func signIn(_ sender: AnyObject) {
+        PFUser.logInWithUsername(inBackground: onlineID.text!, password:password.text!) {
+            (user, error) -> Void in
             if user != nil {
-                self.performSegueWithIdentifier("correctLogin", sender: self)
+                self.performSegue(withIdentifier: "correctLogin", sender: self)
             }
         }
     }
     
     func signUpDemoAccount() {
-        var user = PFUser()
+        let user = PFUser()
         user.username = "ENTERUSERNAME"
         user.password = "ENTERPASSWORD"
         user.email = "ENTEREMAILADDRESS@DEMO.NET"
@@ -28,11 +28,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let imageData = UIImagePNGRepresentation(sitekeyImage!)
         let imageFile = PFFile(name:"nexmo.png", data:imageData!)
         user["sitekey"] = imageFile
-        user.signUpInBackgroundWithBlock {
-            (succeeded: Bool, error: NSError?) -> Void in
-            if let error = error {
-                let errorstring = error.userInfo["error"] as? NSString
-                print(errorstring)
+        user.signUpInBackground {
+            (sucess, error) -> Void in
+            if !sucess {
+                print(error.debugDescription)
             } else {
                 print("User signed up.")
             }
@@ -48,7 +47,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
     }
         
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
