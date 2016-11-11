@@ -8,49 +8,54 @@ class SitekeyViewController:UIViewController, UITextFieldDelegate {
     
     var sitekey:String!
     let alert = UIAlertView()
-    var user_verified : Bool!
+
     
-    @IBAction func signInButton(sender: AnyObject) {
+    @IBAction func signInButton(_ sender: AnyObject) {
         initialWorkFlow()
     }
     
-    @IBAction func incorrectKey(sender: AnyObject) {
+    @IBAction func incorrectKey(_ sender: AnyObject) {
         PFUser.logOut()
-        self.performSegueWithIdentifier("wrongUser", sender: self)
+        self.performSegue(withIdentifier: "wrongUser", sender: self)
     }
     
-    @IBAction func cancelButton(sender: AnyObject) {
+    @IBAction func cancelButton(_ sender: AnyObject) {
         PFUser.logOut()
-        self.performSegueWithIdentifier("wrongUser", sender: self)
+        self.performSegue(withIdentifier: "wrongUser", sender: self)
     }
     
     @IBOutlet weak var pictureKey: UILabel!
     @IBOutlet weak var pictureKeyImage: UIImageView!
     
     func continueWorkflow() {
-        self.performSegueWithIdentifier("verifyPin", sender:self)
+        if (PFUser.current()!["smsVerification"] as! Bool) {
+            self.performSegue(withIdentifier: "verifyPin", sender:self)
+        }
+        else {
+            self.performSegue(withIdentifier: "showAccount", sender:self)
+        }
     }
     
     func initialWorkFlow() {
         let context = LAContext()
         var error: NSError?
-        if context.canEvaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, error: &error) {
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
             let reason = "Authenticate with Touch ID"
-            context.evaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, localizedReason: reason, reply:
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason, reply:
                 {(success, error) in
                     if success {
                         self.continueWorkflow()
                     }
                     else {
-                        let alert = UIAlertController(title: "Failed Identification", message: "Touch ID Authentication Failed. Sign In process stopped.", preferredStyle: .Alert)
-                        let defaultAction = UIAlertAction(title: "Continue", style: .Default) {
+                        let alert = UIAlertController(title: "Failed Identification", message: "Touch ID Authentication Failed. Sign In process stopped.", preferredStyle: .alert)
+                        let defaultAction = UIAlertAction(title: "Continue", style: .default) {
                             UIAlertAction in
                             PFUser.logOut()
-                            self.performSegueWithIdentifier("signInStopped", sender: self)
+                            self.performSegue(withIdentifier: "signInStopped", sender: self)
                         }
                         
                         alert.addAction(defaultAction)
-                        self.presentViewController(alert, animated: true, completion: nil)
+                        self.present(alert, animated: true, completion: nil)
                     }
             })
         }
@@ -60,40 +65,20 @@ class SitekeyViewController:UIViewController, UITextFieldDelegate {
         }
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        VerifyClient.getUserStatus(countryCode: "US", number: PFUser.currentUser()!["phoneNumber"] as! String) { status, error in
-            if let _ = error {
-                // unable to get user status for given device + phone number pair
-                return
-            }
-            else if (status! == "verified") {
-                self.user_verified = true
-            }
-            else {
-                self.user_verified = false
-            }
-        }
+        
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "verifyPin") {
-            //Checking identifier is crucial as there might be multiple
-            // segues attached to same view
-            let verifyVC = segue.destinationViewController as! VerifyPinViewController
-            verifyVC.user_verified = user_verified
-        }
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        let sitekeyImage = PFUser.currentUser()!["sitekey"] as! PFFile
-        sitekeyImage.getDataInBackgroundWithBlock {
-            (imageData: NSData?, error: NSError?) -> Void in
+    override func viewDidAppear(_ animated: Bool) {
+        let sitekeyImage = PFUser.current()!["sitekey"] as! PFFile
+        sitekeyImage.getDataInBackground {
+            (imageData, error) -> Void in
             if error == nil {
                 if let imageData = imageData {
                     self.pictureKeyImage.image = UIImage(data:imageData)

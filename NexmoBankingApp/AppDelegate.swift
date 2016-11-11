@@ -20,17 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
         
-    private var appID = "APP_ID"
-    private var sharedSecret = "SHARED_SECRET"
+    fileprivate var appID = "APP_ID"
+    fileprivate var sharedSecret = "SHARED_SECRET"
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let configuration = ParseClientConfiguration {
             $0.applicationId = "BACK4APP_APP_ID"
             $0.clientKey = "BACK4APP_CLIENT_KEY"
             $0.server = "https://parseapi.back4app.com"
         }
-        Parse.initializeWithConfiguration(configuration)
+        Parse.initialize(with: configuration)
         
         
         NexmoClient.start(applicationId: appID, sharedSecretKey: sharedSecret)
@@ -39,13 +39,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
  
     
-    func applicationWillResignActive(application: UIApplication) { }
+    func applicationWillResignActive(_ application: UIApplication) { }
     
-    func applicationDidEnterBackground(application: UIApplication) { }
+    func applicationDidEnterBackground(_ application: UIApplication) { }
     
-    func applicationWillEnterForeground(application: UIApplication) { }
+    func applicationWillEnterForeground(_ application: UIApplication) { }
     
-    func applicationDidBecomeActive(application: UIApplication) { }
+    func applicationDidBecomeActive(_ application: UIApplication) { }
     
-    func applicationWillTerminate(application: UIApplication) { }
+    func applicationWillTerminate(_ application: UIApplication) { }
 }

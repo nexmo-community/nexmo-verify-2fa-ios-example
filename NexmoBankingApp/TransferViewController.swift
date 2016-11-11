@@ -15,7 +15,7 @@ class TransferViewController:UIViewController {
     @IBOutlet weak var transferAmount: UITextField!
     @IBOutlet weak var segmentedAccount: UISegmentedControl!
     
-    @IBAction func segmentedAccountAction(sender: UISegmentedControl) {
+    @IBAction func segmentedAccountAction(_ sender: UISegmentedControl) {
         switch segmentedAccount.selectedSegmentIndex
         {
         case 0:
@@ -27,7 +27,7 @@ class TransferViewController:UIViewController {
         } 
     }
     
-    @IBAction func completeTransfer(sender: AnyObject) {
+    @IBAction func completeTransfer(_ sender: AnyObject) {
         if (transferAmount.text!.isEmpty == false) {
             transferAmt = Double(transferAmount.text!)
             print("Transfer Amount: \(transferAmt)")
@@ -50,15 +50,15 @@ class TransferViewController:UIViewController {
             print("NEWTOTAL: \(checkingAmount - transferAmt)")
             transferSource = "checkingToSaving"
             afterTransferTotal = checkingAmount - transferAmt
-            self.performSegueWithIdentifier("verifyTransfer", sender: self)
+            self.performSegue(withIdentifier: "verifyTransfer", sender: self)
         }
             
         else {
             print("ERROR")
-            let alert = UIAlertController(title: "Transfer Error", message: "You do not have the requested transfer amount in your Checking Account. Please try again.", preferredStyle: .Alert)
-            let defaultAction = UIAlertAction(title: "Back", style: .Default, handler: nil)
+            let alert = UIAlertController(title: "Transfer Error", message: "You do not have the requested transfer amount in your Checking Account. Please try again.", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "Back", style: .default, handler: nil)
             alert.addAction(defaultAction)
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
             
         }
     }
@@ -67,29 +67,29 @@ class TransferViewController:UIViewController {
         if savingAmount - transferAmt > 0 {
             transferSource = "savingToChecking"
             afterTransferTotal = savingAmount - transferAmt
-            self.performSegueWithIdentifier("verifyTransfer", sender: self)
+            self.performSegue(withIdentifier: "verifyTransfer", sender: self)
         }
         else {
             print("ERROR")
-            let alert = UIAlertController(title: "Transfer Error", message: "You do not have the requested transfer amount in your Savings Account. Please try again.", preferredStyle: .Alert)
-            let defaultAction = UIAlertAction(title: "Back", style: .Default, handler: nil)
+            let alert = UIAlertController(title: "Transfer Error", message: "You do not have the requested transfer amount in your Savings Account. Please try again.", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "Back", style: .default, handler: nil)
             alert.addAction(defaultAction)
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if PFUser.currentUser() != nil {
-            checkingAmount = PFUser.currentUser()!["checking"] as! Double
-            savingAmount = PFUser.currentUser()!["saving"] as! Double
+        if PFUser.current() != nil {
+            checkingAmount = PFUser.current()!["checking"] as! Double
+            savingAmount = PFUser.current()!["saving"] as! Double
             print("not nill")
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if (segue.identifier == "verifyTransfer") {
-            let verifyTransferVC = segue.destinationViewController as! TransferPinViewController;
+            let verifyTransferVC = segue.destination as! TransferPinViewController;
             verifyTransferVC.checkingAmount = checkingAmount
             verifyTransferVC.savingAmount = savingAmount
             verifyTransferVC.transferAmt = transferAmt

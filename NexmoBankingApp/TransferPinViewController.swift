@@ -14,7 +14,7 @@ class TransferPinViewController:UIViewController {
     
     @IBOutlet weak var pincode: UITextField!
     
-    @IBAction func checkPinCode(sender: AnyObject) {
+    @IBAction func checkPinCode(_ sender: AnyObject) {
         VerifyClient.checkPinCode(pincode.text!)
     }
     
@@ -27,47 +27,48 @@ class TransferPinViewController:UIViewController {
         if transferSource == "checkingToSaving" {
             checkingAmount =  checkingAmount - transferAmt
             savingAmount = savingAmount + transferAmt
-            PFUser.currentUser()!["checking"] = checkingAmount
-            PFUser.currentUser()!["saving"] = savingAmount
-            PFUser.currentUser()!.saveInBackground()
-            NSOperationQueue.mainQueue().addOperationWithBlock {
-                self.performSegueWithIdentifier("transferVerified", sender: self)
+            PFUser.current()!["checking"] = checkingAmount
+            PFUser.current()!["saving"] = savingAmount
+            PFUser.current()!.saveInBackground()
+            OperationQueue.main.addOperation {
+                self.performSegue(withIdentifier: "transferVerified", sender: self)
             }
         }
         else if transferSource == "savingToChecking"{
             savingAmount = savingAmount - transferAmt
             checkingAmount =  checkingAmount + transferAmt
-            PFUser.currentUser()!["saving"] = savingAmount
-            PFUser.currentUser()!.saveInBackground()
-            PFUser.currentUser()!["checking"] = checkingAmount
-            PFUser.currentUser()!.saveInBackground()
-            NSOperationQueue.mainQueue().addOperationWithBlock {
-                self.performSegueWithIdentifier("transferVerified", sender: self)
+            PFUser.current()!["saving"] = savingAmount
+            PFUser.current()!.saveInBackground()
+            PFUser.current()!["checking"] = checkingAmount
+            PFUser.current()!.saveInBackground()
+            OperationQueue.main.addOperation {
+                self.performSegue(withIdentifier: "transferVerified", sender: self)
             }
         }
     }
     
     func verify() {
-        VerifyClient.getVerifiedUser(countryCode: "US", phoneNumber: PFUser.currentUser()!["phoneNumber"] as! String,
+        VerifyClient.getVerifiedUser(countryCode: "US", phoneNumber: PFUser.current()!["phoneNumber"] as! String,
             onVerifyInProgress: {
             },
             onUserVerified: {
                 self.performTransfer()
             },
             onError: { verifyError in
-                let alert = UIAlertController(title: "Unsucessful Identification", message: "Logging out. Goodbye.", preferredStyle: .Alert)
-                let defaultAction = UIAlertAction(title: "Goodbye", style: .Default) {
-                    UIAlertAction in
+                let alert = UIAlertController(title: "Unsucessful Identification", message: "Logging out. Goodbye.", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "Goodbye", style: .default, handler: { (action) in
+                    //execute some code when this option is selected
                     VerifyClient.cancelVerification() { error in
                         if let error = error {
-                        // something wen't wrong whilst attempting to cancel the current verification request
+                            // something wen't wrong whilst attempting to cancel the current verification request
                             return
                         }
                     }
-                    self.performSegueWithIdentifier("logout", sender: self)
-                }
-                alert.addAction(defaultAction)
-                self.presentViewController(alert, animated: true, completion: nil)
+                    self.performSegue(withIdentifier: "logout", sender: self)
+                }))
+                
+                self.present(alert, animated: true, completion: nil)
         })
     }
     
