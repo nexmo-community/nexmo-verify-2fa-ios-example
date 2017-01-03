@@ -1,0 +1,18 @@
+PODS:
+  - NexmoVerify (1.0.5):
+    - NexmoVerify/Core (= 1.0.5)
+  - NexmoVerify/Core (1.0.5):
+    - NexmoVerify/DeviceProperties (~> 1.0.5)
+    - NexmoVerify/RequestSigning (~> 1.0.5)
+  - NexmoVerify/DeviceProperties (1.0.5)
+  - NexmoVerify/RequestSigning (1.0.5)
+
+DEPENDENCIES:
+  - NexmoVerify
+
+SPEC CHECKSUMS:
+  NexmoVerify: 309602edd53f355cfe2ac14e2d34c5cf7742808a
+
+PODFILE CHECKSUM: 43db1f93371e64dafd49a41639abd772c73983c8
+
+COCOAPODS: 1.0.1

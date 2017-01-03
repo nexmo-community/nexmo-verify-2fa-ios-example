@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import Parse
 import LocalAuthentication
-import VerifyIosSdk
+import NexmoVerify
 
 class SitekeyViewController:UIViewController, UITextFieldDelegate {
     

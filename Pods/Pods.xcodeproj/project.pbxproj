@@ -1,0 +1,794 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		032B9B0748AA80EB003BE771CF7B1A3F /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3059EBF93993ECE35209C3DBDAA236 /* SearchResponse.swift */; };
+		042977B6FC2D0EC22CF1D0D199A8164D /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115D7482579F375C62E73AE2808C8689 /* Countries.swift */; };
+		04AE8C141BC1FCB75AE6830FF264A3D4 /* SDKRequestSigner.h in Headers */ = {isa = PBXBuildFile; fileRef = 40F7D28EDAD6A1EA29C70B67A7973316 /* SDKRequestSigner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09CE88BF5B1E6D45A9988D5B1B330EC7 /* SDKVerifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B43AD372247FEDEAC50EE21C9BF04F /* SDKVerifyService.swift */; };
+		0BE1EC0B51650736DEBDDF9CFF1010D7 /* VerifyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598B2FBBCCD6626BBA99E9A0A6577F68 /* VerifyResponse.swift */; };
+		0FE7EA39F10CD4859AC69843CB68E1FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		10A265B1B37A9C04CD90FE40CFEA5445 /* VerifyUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47559D01689F1872B783CF5DE96C63E2 /* VerifyUIDelegate.swift */; };
+		185607C55B81061A29CF646997B1A904 /* VerifyUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D87D7A5AD1BC32BABD7335F3D34474 /* VerifyUI.storyboard */; };
+		19C210B6C736DA4893E05F831901D247 /* ControlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FDCC1F45ECFA2D2AC4EEA2BF31D8E /* ControlService.swift */; };
+		249742C391D036C292EEF05D6D03D4BD /* VerifyUIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F4D023684CA7166B69D6ECC5E40B68 /* VerifyUIController.swift */; };
+		270C17C09113A7FE7440A3AA4B9A5B88 /* NexmoVerify-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C86EECC9663117518B4770CE79B59F1 /* NexmoVerify-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B396A595206C472E77250838465BE48 /* NexmoVerify-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B5DC002747238B5753BA3CC5A6202C /* NexmoVerify-dummy.m */; };
+		31B1EF57942E7400B4EA1FB2F37592C5 /* LogoutResponseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA6BC874EF6D3A67C8E5128E2951223 /* LogoutResponseFactory.swift */; };
+		38AD2323AC4B4F9534EEB89CB23DB707 /* NexmoRequestSigning.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C015E2D7141D1663643560F41AEFAEB /* NexmoRequestSigning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DB1394530C9463DC5DBD8F936CA0A68 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BF38CB51C9F5DA64C8B2AAC560AD97D /* Info.plist */; };
+		47F4AEFE9A5D5F954B3A6B2165AC0D42 /* Pods-NexmoBankingApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FB027213755DE1C89FF6B87A278E9E /* Pods-NexmoBankingApp-dummy.m */; };
+		4A802FD4071E08E39B96C1443371EAD3 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723859DB02941520D00B17571B5BF2FE /* SearchService.swift */; };
+		4BDE677834473555EC1009D98E7B8149 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823860D03EC0960C7B86E4D6A0028359 /* SearchRequest.swift */; };
+		4C5E2BCBBA7FF4C0D48B6FF35E7AFAF4 /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B7F51B1F67EE9AC6C11FAF00242186 /* HttpResponse.swift */; };
+		4CD4436E9B54053DAE07F31BCC9DA949 /* SDKLogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABCD1FF8A49914C49D4BCAA0A9379A /* SDKLogoutService.swift */; };
+		553D60B8C6FDED75F39CFAC87AFFB0B2 /* NexmoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFA4CD3765EF6C5428E65088518F00 /* NexmoClient.swift */; };
+		5A538A622ED58BE83F47CDD79C74A8F9 /* ControlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8724F639FF2134D5A35298BA967357B /* ControlRequest.swift */; };
+		6151A81C139318463FFAD50D0A95EE30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		644818E7A3582B1855F76F638C2D18BD /* NexmoVerify.h in Headers */ = {isa = PBXBuildFile; fileRef = 99350DA7D88AAC1B4F02D2289EC16DE8 /* NexmoVerify.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		648C75F21F683C63B047AC85D585F86A /* SDKDeviceProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CC211E58641F675F8DCE18E07A4273 /* SDKDeviceProperties.m */; };
+		687FD0BC76FCC559D223150F68601964 /* Pods-NexmoBankingApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35BED1556058AC9979A6D80F2BE55B6D /* Pods-NexmoBankingApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6987B4603994ACB8E7BAFB2EBB17A824 /* CountryPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F35D2EF1F12E0CC60B98B123190155C /* CountryPickerDelegate.swift */; };
+		6ABC2D8F30675736059849F7781CB63F /* SearchResponseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8A9CEABEA66D58225BE59D0644C84E /* SearchResponseFactory.swift */; };
+		6B7D3746193C7A87094F15CAAE113C2A /* LogoutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974851CC2D4DECA6D0F7427A7A865AA0 /* LogoutResponse.swift */; };
+		6CAB540E1C47D6D1370DFA26478647E9 /* Countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = 817B8B14FBEB47AB537DE732E09D141A /* Countries.plist */; };
+		6E53FDBA00C8CF9FFF22FF9D1837F633 /* CheckRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F10518BCF901F5508EEA8121EC6932 /* CheckRequest.swift */; };
+		6EDEBD86980F6BA30051AB2013C2BE5E /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4659DA14F9B4DB43712C95FB8ED10F /* HttpRequest.swift */; };
+		70A042E152D8C4D296B3B63C3B9C0DA8 /* SDKRequestSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CBD7D9D3B80922F9D771294C595F04 /* SDKRequestSigner.m */; };
+		79CD346E606C501457FB635820C722F2 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BF6FF1F2E45277C2D8D4620076181D /* TokenResponse.swift */; };
+		7A11F747F0530BD21068A0D1A7F8F7DC /* HttpRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B387B2B3929EBABF0814B1B684F424ED /* HttpRequestBuilder.swift */; };
+		7D202E28B4914CD0EC225B20F343DCBA /* VerifyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12214C697BD56CF31A4613B52AF76C6 /* VerifyClient.swift */; };
+		8D4FB22C916B200098D1DE8A16C284AB /* VerifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434DFD694E5906CFC2AA4E36032817F /* VerifyService.swift */; };
+		8D8C5B1A84A0A44CFAF81D5E49960B9E /* SDKCheckService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87190ACD4B26C9F8D3887D3FE1914AE9 /* SDKCheckService.swift */; };
+		9011A55F4345327DDEBACC1469849D77 /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91192AFF1A4EAF1006A7BBA3F89B0AF /* UserStatus.swift */; };
+		95670226066F0BA448779D7568FF98A6 /* ResponseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5728525546846E2EBDDE0F138E25DA73 /* ResponseFactory.swift */; };
+		97E09BAF73D0CE21DEF1B476CDFC7374 /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE1B6FB9AEA70813FD21274C2BD164B /* LogoutService.swift */; };
+		9D9E1398ACF0267CFBE9C7D4ECA9BD03 /* Data+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35602336F5D099237323BF3DE94917ED /* Data+Helper.swift */; };
+		A16FB42F332194DA9CE9E717F68D2668 /* SDKDeviceProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 352DDA6268370DE65F11D173489089AB /* SDKDeviceProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A64E8D32F5ACF66B2A394511D8D9D99C /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3498C66DA9C04AB4B4AC9C8204144E90 /* BaseResponse.swift */; };
+		A8AA9804420F478477AD9B55619A9D32 /* ServiceExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC09210EE0FFB9A65E582132653B0930 /* ServiceExecutor.swift */; };
+		AA329ED5EC0F147062184B959DC109B4 /* ResponseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685E246AA6D5AA209597754313FA42B /* ResponseCode.swift */; };
+		AE81DEEAE3FD892A4C53F173D86335C3 /* DevicePropertyAccessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C3C7C5164E70C59839E51FE3283D0A2 /* DevicePropertyAccessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0B9500E602591A5039B808FD8D6D648 /* SDKSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B8608F1B7BDB0079CC9C9BA4EE2CAF /* SDKSearchService.swift */; };
+		B357743A99DC794F94FCB8DCE02674B3 /* VerifyResponseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A9A0EF620B383B96B26BB3483D5428 /* VerifyResponseFactory.swift */; };
+		B3E2A759D29CC28B360E4742436E9CBB /* CheckResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAB687EE1F941C070BC2C921FB3B0DB /* CheckResponse.swift */; };
+		BA1716DA2A9ABDA75FECDE907C1C80F2 /* VerifyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF11D0947A2576B54C65DD1EB8BF7952 /* VerifyTask.swift */; };
+		C61AE44DACC67FD88D671D5B40C7F405 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF6EDEE6616C92C7672B2EB1C62BC34 /* Config.swift */; };
+		C773497C48F1F75CEAC6D384791C3C08 /* CheckReponseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD37F65A0681574102EE115FBDD11E1C /* CheckReponseFactory.swift */; };
+		CBB9B9DDD26FC9FEF33E0028AF7B7461 /* SDKProperties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 753D20141D7D920B6B8D3B88E95A3429 /* SDKProperties.plist */; };
+		CC1AAC0092026A220947E5C92B4915D2 /* LogoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FA72546E070C7F327FE1E1091C3DBF /* LogoutRequest.swift */; };
+		D48386C511EC9347B0A7052AE8BC43B0 /* NexmoDeviceProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = A02B40A610F75FF36D06E8AD33D7F4EB /* NexmoDeviceProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5D66130EB605D07A44E8FBB546C5F2D /* ControlResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556E1910CEAC636162F0835E853CA196 /* ControlResponse.swift */; };
+		D6B0DB2848B673B9E5C7C404E5CA0950 /* ControlResponseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696DD249FDD8B6D25207F6EF38CD9A14 /* ControlResponseFactory.swift */; };
+		D6BFB8127E7BD57717315A5CDFCA6E95 /* VerifyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C7E9A98A126A70FA3FDF0826149ACB /* VerifyRequest.swift */; };
+		D8609AEE8FF8A1D4EE4D576FF4C2B1C9 /* CountryPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29327FF5990CADCA8AF54AAF99BC26FB /* CountryPickerController.swift */; };
+		DBDD9287CC53E0D1908FB53B0FF79775 /* SDKControlService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668BCA2D377874EC51FB884A0CE0F68 /* SDKControlService.swift */; };
+		E62D6CCB392F16FFED84282034A8C505 /* CheckService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1C6F992FE36972E9B24641E1C9162A /* CheckService.swift */; };
+		F101E4E2771E1E0E1CCBB94E1A38CF6C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49FC1518360DF69435809808EA0329A /* Logger.swift */; };
+		F6035D1D5336C2616752423FB0D18BC7 /* RequestSigner.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E127C3F17DF91254F43D4F1B230E5E4 /* RequestSigner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA37BD3515695396A98BA8F1257A35B6 /* VerifyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2645509460C4C43A86A676FC23BA43 /* VerifyError.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8D480129D7B3E2ABFBDB172B5F89FBD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C875D8D0E8DE367DD1909E6F7524B27;
+			remoteInfo = NexmoVerify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04F10518BCF901F5508EEA8121EC6932 /* CheckRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckRequest.swift; path = VerifySDK/CheckRequest.swift; sourceTree = "<group>"; };
+		0D2645509460C4C43A86A676FC23BA43 /* VerifyError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerifyError.swift; path = VerifySDK/VerifyError.swift; sourceTree = "<group>"; };
+		115D7482579F375C62E73AE2808C8689 /* Countries.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Countries.swift; path = VerifySDK/Countries.swift; sourceTree = "<group>"; };
+		11B8608F1B7BDB0079CC9C9BA4EE2CAF /* SDKSearchService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SDKSearchService.swift; path = VerifySDK/SDKSearchService.swift; sourceTree = "<group>"; };
+		1C3C7C5164E70C59839E51FE3283D0A2 /* DevicePropertyAccessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DevicePropertyAccessor.h; path = DeviceProperties/DevicePropertyAccessor.h; sourceTree = "<group>"; };
+		29327FF5990CADCA8AF54AAF99BC26FB /* CountryPickerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountryPickerController.swift; path = VerifySDK/CountryPickerController.swift; sourceTree = "<group>"; };
+		2E127C3F17DF91254F43D4F1B230E5E4 /* RequestSigner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RequestSigner.h; path = RequestSigning/RequestSigner.h; sourceTree = "<group>"; };
+		3498C66DA9C04AB4B4AC9C8204144E90 /* BaseResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseResponse.swift; path = VerifySDK/BaseResponse.swift; sourceTree = "<group>"; };
+		34B5DC002747238B5753BA3CC5A6202C /* NexmoVerify-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NexmoVerify-dummy.m"; sourceTree = "<group>"; };
+		352DDA6268370DE65F11D173489089AB /* SDKDeviceProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDKDeviceProperties.h; path = DeviceProperties/SDKDeviceProperties.h; sourceTree = "<group>"; };
+		35602336F5D099237323BF3DE94917ED /* Data+Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Helper.swift"; path = "VerifySDK/Data+Helper.swift"; sourceTree = "<group>"; };
+		35BED1556058AC9979A6D80F2BE55B6D /* Pods-NexmoBankingApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NexmoBankingApp-umbrella.h"; sourceTree = "<group>"; };
+		3668BCA2D377874EC51FB884A0CE0F68 /* SDKControlService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SDKControlService.swift; path = VerifySDK/SDKControlService.swift; sourceTree = "<group>"; };
+		3BF38CB51C9F5DA64C8B2AAC560AD97D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = VerifySDK/Info.plist; sourceTree = "<group>"; };
+		3C015E2D7141D1663643560F41AEFAEB /* NexmoRequestSigning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NexmoRequestSigning.h; path = RequestSigning/NexmoRequestSigning.h; sourceTree = "<group>"; };
+		3D6909923BA08BADB675B8FE39198942 /* Pods-NexmoBankingApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NexmoBankingApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3E1B3C876F32E481BE8299987BDBEDEF /* Pods-NexmoBankingApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NexmoBankingApp-frameworks.sh"; sourceTree = "<group>"; };
+		40F7D28EDAD6A1EA29C70B67A7973316 /* SDKRequestSigner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDKRequestSigner.h; path = RequestSigning/SDKRequestSigner.h; sourceTree = "<group>"; };
+		44C7E9A98A126A70FA3FDF0826149ACB /* VerifyRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerifyRequest.swift; path = VerifySDK/VerifyRequest.swift; sourceTree = "<group>"; };
+		47559D01689F1872B783CF5DE96C63E2 /* VerifyUIDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerifyUIDelegate.swift; path = VerifySDK/VerifyUIDelegate.swift; sourceTree = "<group>"; };
+		4EA6BC874EF6D3A67C8E5128E2951223 /* LogoutResponseFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogoutResponseFactory.swift; path = VerifySDK/LogoutResponseFactory.swift; sourceTree = "<group>"; };
+		50B7F51B1F67EE9AC6C11FAF00242186 /* HttpResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpResponse.swift; path = VerifySDK/HttpResponse.swift; sourceTree = "<group>"; };
+		556E1910CEAC636162F0835E853CA196 /* ControlResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ControlResponse.swift; path = VerifySDK/ControlResponse.swift; sourceTree = "<group>"; };
+		5728525546846E2EBDDE0F138E25DA73 /* ResponseFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseFactory.swift; path = VerifySDK/ResponseFactory.swift; sourceTree = "<group>"; };
+		598B2FBBCCD6626BBA99E9A0A6577F68 /* VerifyResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerifyResponse.swift; path = VerifySDK/VerifyResponse.swift; sourceTree = "<group>"; };
+		5CCC1B7403A1629439EDC2109B4A2B22 /* Pods-NexmoBankingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NexmoBankingApp.release.xcconfig"; sourceTree = "<group>"; };
+		5DA128FFC6104CD91CB21272553825A1 /* Pods_NexmoBankingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NexmoBankingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F35D2EF1F12E0CC60B98B123190155C /* CountryPickerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountryPickerDelegate.swift; path = VerifySDK/CountryPickerDelegate.swift; sourceTree = "<group>"; };
+		696DD249FDD8B6D25207F6EF38CD9A14 /* ControlResponseFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ControlResponseFactory.swift; path = VerifySDK/ControlResponseFactory.swift; sourceTree = "<group>"; };
+		69A9A0EF620B383B96B26BB3483D5428 /* VerifyResponseFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerifyResponseFactory.swift; path = VerifySDK/VerifyResponseFactory.swift; sourceTree = "<group>"; };
+		6D431331E94315A3C8526C0EA3BD1C05 /* NexmoVerify.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NexmoVerify.xcconfig; sourceTree = "<group>"; };
+		723859DB02941520D00B17571B5BF2FE /* SearchService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SearchService.swift; path = VerifySDK/SearchService.swift; sourceTree = "<group>"; };
+		753D20141D7D920B6B8D3B88E95A3429 /* SDKProperties.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = SDKProperties.plist; path = VerifySDK/SDKProperties.plist; sourceTree = "<group>"; };
+		75D87D7A5AD1BC32BABD7335F3D34474 /* VerifyUI.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = VerifyUI.storyboard; path = VerifySDK/VerifyUI.storyboard; sourceTree = "<group>"; };
+		7A02D45BAE69C76B9AB40EB75D1DB7BF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BEFA4CD3765EF6C5428E65088518F00 /* NexmoClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NexmoClient.swift; path = VerifySDK/NexmoClient.swift; sourceTree = "<group>"; };
+		7F1C6F992FE36972E9B24641E1C9162A /* CheckService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckService.swift; path = VerifySDK/CheckService.swift; sourceTree = "<group>"; };
+		817B8B14FBEB47AB537DE732E09D141A /* Countries.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Countries.plist; path = VerifySDK/Countries.plist; sourceTree = "<group>"; };
+		823860D03EC0960C7B86E4D6A0028359 /* SearchRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SearchRequest.swift; path = VerifySDK/SearchRequest.swift; sourceTree = "<group>"; };
+		8434DFD694E5906CFC2AA4E36032817F /* VerifyService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerifyService.swift; path = VerifySDK/VerifyService.swift; sourceTree = "<group>"; };
+		87190ACD4B26C9F8D3887D3FE1914AE9 /* SDKCheckService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SDKCheckService.swift; path = VerifySDK/SDKCheckService.swift; sourceTree = "<group>"; };
+		8976725D6E18ACC12EDF33706C1D4DB1 /* Pods-NexmoBankingApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NexmoBankingApp-resources.sh"; sourceTree = "<group>"; };
+		8A1B9D8C0A2121D2098451D0A6F36295 /* Pods-NexmoBankingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NexmoBankingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8C86EECC9663117518B4770CE79B59F1 /* NexmoVerify-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NexmoVerify-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		974851CC2D4DECA6D0F7427A7A865AA0 /* LogoutResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogoutResponse.swift; path = VerifySDK/LogoutResponse.swift; sourceTree = "<group>"; };
+		99350DA7D88AAC1B4F02D2289EC16DE8 /* NexmoVerify.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NexmoVerify.h; path = VerifySDK/NexmoVerify.h; sourceTree = "<group>"; };
+		9FABCD1FF8A49914C49D4BCAA0A9379A /* SDKLogoutService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SDKLogoutService.swift; path = VerifySDK/SDKLogoutService.swift; sourceTree = "<group>"; };
+		A02B40A610F75FF36D06E8AD33D7F4EB /* NexmoDeviceProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NexmoDeviceProperties.h; path = DeviceProperties/NexmoDeviceProperties.h; sourceTree = "<group>"; };
+		A1BF6FF1F2E45277C2D8D4620076181D /* TokenResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenResponse.swift; path = VerifySDK/TokenResponse.swift; sourceTree = "<group>"; };
+		A27D6657025F82F145BD7E1C39F59D4F /* NexmoVerify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NexmoVerify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2F4D023684CA7166B69D6ECC5E40B68 /* VerifyUIController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerifyUIController.swift; path = VerifySDK/VerifyUIController.swift; sourceTree = "<group>"; };
+		A5CC211E58641F675F8DCE18E07A4273 /* SDKDeviceProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDKDeviceProperties.m; path = DeviceProperties/SDKDeviceProperties.m; sourceTree = "<group>"; };
+		AC09210EE0FFB9A65E582132653B0930 /* ServiceExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceExecutor.swift; path = VerifySDK/ServiceExecutor.swift; sourceTree = "<group>"; };
+		B387B2B3929EBABF0814B1B684F424ED /* HttpRequestBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpRequestBuilder.swift; path = VerifySDK/HttpRequestBuilder.swift; sourceTree = "<group>"; };
+		BC4E94E14A8640C0B8431BFCEC8780C7 /* Pods-NexmoBankingApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NexmoBankingApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		BCF6EDEE6616C92C7672B2EB1C62BC34 /* Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Config.swift; path = VerifySDK/Config.swift; sourceTree = "<group>"; };
+		BD37F65A0681574102EE115FBDD11E1C /* CheckReponseFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckReponseFactory.swift; path = VerifySDK/CheckReponseFactory.swift; sourceTree = "<group>"; };
+		C0AD1991119D6928461253E4971DE1D5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C49FC1518360DF69435809808EA0329A /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = VerifySDK/Logger.swift; sourceTree = "<group>"; };
+		C7B7EAD0FA1CD2B48DDA3E7A25305E9C /* Pods-NexmoBankingApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NexmoBankingApp.modulemap"; sourceTree = "<group>"; };
+		C7CBD7D9D3B80922F9D771294C595F04 /* SDKRequestSigner.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDKRequestSigner.m; path = RequestSigning/SDKRequestSigner.m; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D45FDCC1F45ECFA2D2AC4EEA2BF31D8E /* ControlService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ControlService.swift; path = VerifySDK/ControlService.swift; sourceTree = "<group>"; };
+		D685E246AA6D5AA209597754313FA42B /* ResponseCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseCode.swift; path = VerifySDK/ResponseCode.swift; sourceTree = "<group>"; };
+		D9424A0488B6A76535F928BC67D169D1 /* NexmoVerify-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NexmoVerify-prefix.pch"; sourceTree = "<group>"; };
+		D96A4263D963288F2CD0FF48DEF35A36 /* NexmoVerify.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NexmoVerify.modulemap; sourceTree = "<group>"; };
+		DA4659DA14F9B4DB43712C95FB8ED10F /* HttpRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpRequest.swift; path = VerifySDK/HttpRequest.swift; sourceTree = "<group>"; };
+		DF11D0947A2576B54C65DD1EB8BF7952 /* VerifyTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerifyTask.swift; path = VerifySDK/VerifyTask.swift; sourceTree = "<group>"; };
+		E12214C697BD56CF31A4613B52AF76C6 /* VerifyClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VerifyClient.swift; path = VerifySDK/VerifyClient.swift; sourceTree = "<group>"; };
+		E3FA72546E070C7F327FE1E1091C3DBF /* LogoutRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogoutRequest.swift; path = VerifySDK/LogoutRequest.swift; sourceTree = "<group>"; };
+		E8724F639FF2134D5A35298BA967357B /* ControlRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ControlRequest.swift; path = VerifySDK/ControlRequest.swift; sourceTree = "<group>"; };
+		EE8A9CEABEA66D58225BE59D0644C84E /* SearchResponseFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SearchResponseFactory.swift; path = VerifySDK/SearchResponseFactory.swift; sourceTree = "<group>"; };
+		EF3059EBF93993ECE35209C3DBDAA236 /* SearchResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SearchResponse.swift; path = VerifySDK/SearchResponse.swift; sourceTree = "<group>"; };
+		F8B43AD372247FEDEAC50EE21C9BF04F /* SDKVerifyService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SDKVerifyService.swift; path = VerifySDK/SDKVerifyService.swift; sourceTree = "<group>"; };
+		F91192AFF1A4EAF1006A7BBA3F89B0AF /* UserStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserStatus.swift; path = VerifySDK/UserStatus.swift; sourceTree = "<group>"; };
+		F9FB027213755DE1C89FF6B87A278E9E /* Pods-NexmoBankingApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NexmoBankingApp-dummy.m"; sourceTree = "<group>"; };
+		FBE1B6FB9AEA70813FD21274C2BD164B /* LogoutService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogoutService.swift; path = VerifySDK/LogoutService.swift; sourceTree = "<group>"; };
+		FFAB687EE1F941C070BC2C921FB3B0DB /* CheckResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckResponse.swift; path = VerifySDK/CheckResponse.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B23734CDC0A8E631133F4D3EFCDA9C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6151A81C139318463FFAD50D0A95EE30 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3A08A2F316239F02BC1F3378D21FA4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FE7EA39F10CD4859AC69843CB68E1FD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		014AF4FC3609A7B4F592FD012C2189D2 /* DeviceProperties */ = {
+			isa = PBXGroup;
+			children = (
+				1C3C7C5164E70C59839E51FE3283D0A2 /* DevicePropertyAccessor.h */,
+				A02B40A610F75FF36D06E8AD33D7F4EB /* NexmoDeviceProperties.h */,
+				352DDA6268370DE65F11D173489089AB /* SDKDeviceProperties.h */,
+				A5CC211E58641F675F8DCE18E07A4273 /* SDKDeviceProperties.m */,
+			);
+			name = DeviceProperties;
+			sourceTree = "<group>";
+		};
+		30EA0984AED8B8CC2BD187ED784914A7 /* Pods-NexmoBankingApp */ = {
+			isa = PBXGroup;
+			children = (
+				C0AD1991119D6928461253E4971DE1D5 /* Info.plist */,
+				C7B7EAD0FA1CD2B48DDA3E7A25305E9C /* Pods-NexmoBankingApp.modulemap */,
+				3D6909923BA08BADB675B8FE39198942 /* Pods-NexmoBankingApp-acknowledgements.markdown */,
+				BC4E94E14A8640C0B8431BFCEC8780C7 /* Pods-NexmoBankingApp-acknowledgements.plist */,
+				F9FB027213755DE1C89FF6B87A278E9E /* Pods-NexmoBankingApp-dummy.m */,
+				3E1B3C876F32E481BE8299987BDBEDEF /* Pods-NexmoBankingApp-frameworks.sh */,
+				8976725D6E18ACC12EDF33706C1D4DB1 /* Pods-NexmoBankingApp-resources.sh */,
+				35BED1556058AC9979A6D80F2BE55B6D /* Pods-NexmoBankingApp-umbrella.h */,
+				8A1B9D8C0A2121D2098451D0A6F36295 /* Pods-NexmoBankingApp.debug.xcconfig */,
+				5CCC1B7403A1629439EDC2109B4A2B22 /* Pods-NexmoBankingApp.release.xcconfig */,
+			);
+			name = "Pods-NexmoBankingApp";
+			path = "Target Support Files/Pods-NexmoBankingApp";
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		53A2BBFEA867A48DA1A3B1C856BAA7F0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3498C66DA9C04AB4B4AC9C8204144E90 /* BaseResponse.swift */,
+				BD37F65A0681574102EE115FBDD11E1C /* CheckReponseFactory.swift */,
+				04F10518BCF901F5508EEA8121EC6932 /* CheckRequest.swift */,
+				FFAB687EE1F941C070BC2C921FB3B0DB /* CheckResponse.swift */,
+				7F1C6F992FE36972E9B24641E1C9162A /* CheckService.swift */,
+				BCF6EDEE6616C92C7672B2EB1C62BC34 /* Config.swift */,
+				E8724F639FF2134D5A35298BA967357B /* ControlRequest.swift */,
+				556E1910CEAC636162F0835E853CA196 /* ControlResponse.swift */,
+				696DD249FDD8B6D25207F6EF38CD9A14 /* ControlResponseFactory.swift */,
+				D45FDCC1F45ECFA2D2AC4EEA2BF31D8E /* ControlService.swift */,
+				115D7482579F375C62E73AE2808C8689 /* Countries.swift */,
+				29327FF5990CADCA8AF54AAF99BC26FB /* CountryPickerController.swift */,
+				5F35D2EF1F12E0CC60B98B123190155C /* CountryPickerDelegate.swift */,
+				35602336F5D099237323BF3DE94917ED /* Data+Helper.swift */,
+				DA4659DA14F9B4DB43712C95FB8ED10F /* HttpRequest.swift */,
+				B387B2B3929EBABF0814B1B684F424ED /* HttpRequestBuilder.swift */,
+				50B7F51B1F67EE9AC6C11FAF00242186 /* HttpResponse.swift */,
+				C49FC1518360DF69435809808EA0329A /* Logger.swift */,
+				E3FA72546E070C7F327FE1E1091C3DBF /* LogoutRequest.swift */,
+				974851CC2D4DECA6D0F7427A7A865AA0 /* LogoutResponse.swift */,
+				4EA6BC874EF6D3A67C8E5128E2951223 /* LogoutResponseFactory.swift */,
+				FBE1B6FB9AEA70813FD21274C2BD164B /* LogoutService.swift */,
+				7BEFA4CD3765EF6C5428E65088518F00 /* NexmoClient.swift */,
+				99350DA7D88AAC1B4F02D2289EC16DE8 /* NexmoVerify.h */,
+				D685E246AA6D5AA209597754313FA42B /* ResponseCode.swift */,
+				5728525546846E2EBDDE0F138E25DA73 /* ResponseFactory.swift */,
+				87190ACD4B26C9F8D3887D3FE1914AE9 /* SDKCheckService.swift */,
+				3668BCA2D377874EC51FB884A0CE0F68 /* SDKControlService.swift */,
+				9FABCD1FF8A49914C49D4BCAA0A9379A /* SDKLogoutService.swift */,
+				11B8608F1B7BDB0079CC9C9BA4EE2CAF /* SDKSearchService.swift */,
+				F8B43AD372247FEDEAC50EE21C9BF04F /* SDKVerifyService.swift */,
+				823860D03EC0960C7B86E4D6A0028359 /* SearchRequest.swift */,
+				EF3059EBF93993ECE35209C3DBDAA236 /* SearchResponse.swift */,
+				EE8A9CEABEA66D58225BE59D0644C84E /* SearchResponseFactory.swift */,
+				723859DB02941520D00B17571B5BF2FE /* SearchService.swift */,
+				AC09210EE0FFB9A65E582132653B0930 /* ServiceExecutor.swift */,
+				A1BF6FF1F2E45277C2D8D4620076181D /* TokenResponse.swift */,
+				F91192AFF1A4EAF1006A7BBA3F89B0AF /* UserStatus.swift */,
+				E12214C697BD56CF31A4613B52AF76C6 /* VerifyClient.swift */,
+				0D2645509460C4C43A86A676FC23BA43 /* VerifyError.swift */,
+				44C7E9A98A126A70FA3FDF0826149ACB /* VerifyRequest.swift */,
+				598B2FBBCCD6626BBA99E9A0A6577F68 /* VerifyResponse.swift */,
+				69A9A0EF620B383B96B26BB3483D5428 /* VerifyResponseFactory.swift */,
+				8434DFD694E5906CFC2AA4E36032817F /* VerifyService.swift */,
+				DF11D0947A2576B54C65DD1EB8BF7952 /* VerifyTask.swift */,
+				A2F4D023684CA7166B69D6ECC5E40B68 /* VerifyUIController.swift */,
+				47559D01689F1872B783CF5DE96C63E2 /* VerifyUIDelegate.swift */,
+				D6D82571EDB576E2EB7339C3F392208B /* Resources */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				A7EE38D45D28478B3D9C66D5FB8DE116 /* Pods */,
+				C4BE611EC96CA55E2F902C795AF7BA24 /* Products */,
+				FC6EDFFEDAE8058EDDEF4E3238AE9292 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A7EE38D45D28478B3D9C66D5FB8DE116 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C13B7FB31C9F7148172B02567EC7E48A /* NexmoVerify */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C13B7FB31C9F7148172B02567EC7E48A /* NexmoVerify */ = {
+			isa = PBXGroup;
+			children = (
+				53A2BBFEA867A48DA1A3B1C856BAA7F0 /* Core */,
+				014AF4FC3609A7B4F592FD012C2189D2 /* DeviceProperties */,
+				FCA0B7C6B24C73A25C494B730FACB22E /* RequestSigning */,
+				D7549A264E42CB057D785135FEA79C16 /* Support Files */,
+			);
+			path = NexmoVerify;
+			sourceTree = "<group>";
+		};
+		C4BE611EC96CA55E2F902C795AF7BA24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A27D6657025F82F145BD7E1C39F59D4F /* NexmoVerify.framework */,
+				5DA128FFC6104CD91CB21272553825A1 /* Pods_NexmoBankingApp.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D6D82571EDB576E2EB7339C3F392208B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				817B8B14FBEB47AB537DE732E09D141A /* Countries.plist */,
+				3BF38CB51C9F5DA64C8B2AAC560AD97D /* Info.plist */,
+				753D20141D7D920B6B8D3B88E95A3429 /* SDKProperties.plist */,
+				75D87D7A5AD1BC32BABD7335F3D34474 /* VerifyUI.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D7549A264E42CB057D785135FEA79C16 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A02D45BAE69C76B9AB40EB75D1DB7BF /* Info.plist */,
+				D96A4263D963288F2CD0FF48DEF35A36 /* NexmoVerify.modulemap */,
+				6D431331E94315A3C8526C0EA3BD1C05 /* NexmoVerify.xcconfig */,
+				34B5DC002747238B5753BA3CC5A6202C /* NexmoVerify-dummy.m */,
+				D9424A0488B6A76535F928BC67D169D1 /* NexmoVerify-prefix.pch */,
+				8C86EECC9663117518B4770CE79B59F1 /* NexmoVerify-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NexmoVerify";
+			sourceTree = "<group>";
+		};
+		FC6EDFFEDAE8058EDDEF4E3238AE9292 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				30EA0984AED8B8CC2BD187ED784914A7 /* Pods-NexmoBankingApp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FCA0B7C6B24C73A25C494B730FACB22E /* RequestSigning */ = {
+			isa = PBXGroup;
+			children = (
+				3C015E2D7141D1663643560F41AEFAEB /* NexmoRequestSigning.h */,
+				2E127C3F17DF91254F43D4F1B230E5E4 /* RequestSigner.h */,
+				40F7D28EDAD6A1EA29C70B67A7973316 /* SDKRequestSigner.h */,
+				C7CBD7D9D3B80922F9D771294C595F04 /* SDKRequestSigner.m */,
+			);
+			name = RequestSigning;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		10BC88E96A9A2D1761BAA5C2BECC9BC4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE81DEEAE3FD892A4C53F173D86335C3 /* DevicePropertyAccessor.h in Headers */,
+				D48386C511EC9347B0A7052AE8BC43B0 /* NexmoDeviceProperties.h in Headers */,
+				38AD2323AC4B4F9534EEB89CB23DB707 /* NexmoRequestSigning.h in Headers */,
+				270C17C09113A7FE7440A3AA4B9A5B88 /* NexmoVerify-umbrella.h in Headers */,
+				644818E7A3582B1855F76F638C2D18BD /* NexmoVerify.h in Headers */,
+				F6035D1D5336C2616752423FB0D18BC7 /* RequestSigner.h in Headers */,
+				A16FB42F332194DA9CE9E717F68D2668 /* SDKDeviceProperties.h in Headers */,
+				04AE8C141BC1FCB75AE6830FF264A3D4 /* SDKRequestSigner.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2434E64C96A39FA3FEF76153C27F614 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				687FD0BC76FCC559D223150F68601964 /* Pods-NexmoBankingApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1C875D8D0E8DE367DD1909E6F7524B27 /* NexmoVerify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 295F8805C04EF111A9579A741E16C1BE /* Build configuration list for PBXNativeTarget "NexmoVerify" */;
+			buildPhases = (
+				4B0CEA30653FE3A6C4B3BB8276001403 /* Sources */,
+				4B23734CDC0A8E631133F4D3EFCDA9C0 /* Frameworks */,
+				10BC88E96A9A2D1761BAA5C2BECC9BC4 /* Headers */,
+				DFD1BC1E0FA879195D3545A23C319C60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NexmoVerify;
+			productName = NexmoVerify;
+			productReference = A27D6657025F82F145BD7E1C39F59D4F /* NexmoVerify.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AF944D1A3F389F73EC65A275BB5EEF23 /* Pods-NexmoBankingApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF8F33E1F5ABF900D487A0648B15E594 /* Build configuration list for PBXNativeTarget "Pods-NexmoBankingApp" */;
+			buildPhases = (
+				15C2EBB8595F7C2DB1D7AD6CF71B3CDE /* Sources */,
+				B3A08A2F316239F02BC1F3378D21FA4D /* Frameworks */,
+				C2434E64C96A39FA3FEF76153C27F614 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48B27F08D24B7B2DC1FD8C0A6E4971E4 /* PBXTargetDependency */,
+			);
+			name = "Pods-NexmoBankingApp";
+			productName = "Pods-NexmoBankingApp";
+			productReference = 5DA128FFC6104CD91CB21272553825A1 /* Pods_NexmoBankingApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C4BE611EC96CA55E2F902C795AF7BA24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C875D8D0E8DE367DD1909E6F7524B27 /* NexmoVerify */,
+				AF944D1A3F389F73EC65A275BB5EEF23 /* Pods-NexmoBankingApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFD1BC1E0FA879195D3545A23C319C60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CAB540E1C47D6D1370DFA26478647E9 /* Countries.plist in Resources */,
+				3DB1394530C9463DC5DBD8F936CA0A68 /* Info.plist in Resources */,
+				CBB9B9DDD26FC9FEF33E0028AF7B7461 /* SDKProperties.plist in Resources */,
+				185607C55B81061A29CF646997B1A904 /* VerifyUI.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15C2EBB8595F7C2DB1D7AD6CF71B3CDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47F4AEFE9A5D5F954B3A6B2165AC0D42 /* Pods-NexmoBankingApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B0CEA30653FE3A6C4B3BB8276001403 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A64E8D32F5ACF66B2A394511D8D9D99C /* BaseResponse.swift in Sources */,
+				C773497C48F1F75CEAC6D384791C3C08 /* CheckReponseFactory.swift in Sources */,
+				6E53FDBA00C8CF9FFF22FF9D1837F633 /* CheckRequest.swift in Sources */,
+				B3E2A759D29CC28B360E4742436E9CBB /* CheckResponse.swift in Sources */,
+				E62D6CCB392F16FFED84282034A8C505 /* CheckService.swift in Sources */,
+				C61AE44DACC67FD88D671D5B40C7F405 /* Config.swift in Sources */,
+				5A538A622ED58BE83F47CDD79C74A8F9 /* ControlRequest.swift in Sources */,
+				D5D66130EB605D07A44E8FBB546C5F2D /* ControlResponse.swift in Sources */,
+				D6B0DB2848B673B9E5C7C404E5CA0950 /* ControlResponseFactory.swift in Sources */,
+				19C210B6C736DA4893E05F831901D247 /* ControlService.swift in Sources */,
+				042977B6FC2D0EC22CF1D0D199A8164D /* Countries.swift in Sources */,
+				D8609AEE8FF8A1D4EE4D576FF4C2B1C9 /* CountryPickerController.swift in Sources */,
+				6987B4603994ACB8E7BAFB2EBB17A824 /* CountryPickerDelegate.swift in Sources */,
+				9D9E1398ACF0267CFBE9C7D4ECA9BD03 /* Data+Helper.swift in Sources */,
+				6EDEBD86980F6BA30051AB2013C2BE5E /* HttpRequest.swift in Sources */,
+				7A11F747F0530BD21068A0D1A7F8F7DC /* HttpRequestBuilder.swift in Sources */,
+				4C5E2BCBBA7FF4C0D48B6FF35E7AFAF4 /* HttpResponse.swift in Sources */,
+				F101E4E2771E1E0E1CCBB94E1A38CF6C /* Logger.swift in Sources */,
+				CC1AAC0092026A220947E5C92B4915D2 /* LogoutRequest.swift in Sources */,
+				6B7D3746193C7A87094F15CAAE113C2A /* LogoutResponse.swift in Sources */,
+				31B1EF57942E7400B4EA1FB2F37592C5 /* LogoutResponseFactory.swift in Sources */,
+				97E09BAF73D0CE21DEF1B476CDFC7374 /* LogoutService.swift in Sources */,
+				553D60B8C6FDED75F39CFAC87AFFB0B2 /* NexmoClient.swift in Sources */,
+				2B396A595206C472E77250838465BE48 /* NexmoVerify-dummy.m in Sources */,
+				AA329ED5EC0F147062184B959DC109B4 /* ResponseCode.swift in Sources */,
+				95670226066F0BA448779D7568FF98A6 /* ResponseFactory.swift in Sources */,
+				8D8C5B1A84A0A44CFAF81D5E49960B9E /* SDKCheckService.swift in Sources */,
+				DBDD9287CC53E0D1908FB53B0FF79775 /* SDKControlService.swift in Sources */,
+				648C75F21F683C63B047AC85D585F86A /* SDKDeviceProperties.m in Sources */,
+				4CD4436E9B54053DAE07F31BCC9DA949 /* SDKLogoutService.swift in Sources */,
+				70A042E152D8C4D296B3B63C3B9C0DA8 /* SDKRequestSigner.m in Sources */,
+				B0B9500E602591A5039B808FD8D6D648 /* SDKSearchService.swift in Sources */,
+				09CE88BF5B1E6D45A9988D5B1B330EC7 /* SDKVerifyService.swift in Sources */,
+				4BDE677834473555EC1009D98E7B8149 /* SearchRequest.swift in Sources */,
+				032B9B0748AA80EB003BE771CF7B1A3F /* SearchResponse.swift in Sources */,
+				6ABC2D8F30675736059849F7781CB63F /* SearchResponseFactory.swift in Sources */,
+				4A802FD4071E08E39B96C1443371EAD3 /* SearchService.swift in Sources */,
+				A8AA9804420F478477AD9B55619A9D32 /* ServiceExecutor.swift in Sources */,
+				79CD346E606C501457FB635820C722F2 /* TokenResponse.swift in Sources */,
+				9011A55F4345327DDEBACC1469849D77 /* UserStatus.swift in Sources */,
+				7D202E28B4914CD0EC225B20F343DCBA /* VerifyClient.swift in Sources */,
+				FA37BD3515695396A98BA8F1257A35B6 /* VerifyError.swift in Sources */,
+				D6BFB8127E7BD57717315A5CDFCA6E95 /* VerifyRequest.swift in Sources */,
+				0BE1EC0B51650736DEBDDF9CFF1010D7 /* VerifyResponse.swift in Sources */,
+				B357743A99DC794F94FCB8DCE02674B3 /* VerifyResponseFactory.swift in Sources */,
+				8D4FB22C916B200098D1DE8A16C284AB /* VerifyService.swift in Sources */,
+				BA1716DA2A9ABDA75FECDE907C1C80F2 /* VerifyTask.swift in Sources */,
+				249742C391D036C292EEF05D6D03D4BD /* VerifyUIController.swift in Sources */,
+				10A265B1B37A9C04CD90FE40CFEA5445 /* VerifyUIDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48B27F08D24B7B2DC1FD8C0A6E4971E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NexmoVerify;
+			target = 1C875D8D0E8DE367DD1909E6F7524B27 /* NexmoVerify */;
+			targetProxy = 8D480129D7B3E2ABFBDB172B5F89FBD6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		311F326AB199F6006CD80F988ADF3580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D431331E94315A3C8526C0EA3BD1C05 /* NexmoVerify.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NexmoVerify/NexmoVerify-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NexmoVerify/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NexmoVerify/NexmoVerify.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = NexmoVerify;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		46EE69AF77A148AF92860F097B5698B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		77CC56B32B9C31816D55F3A58E4ADC14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D431331E94315A3C8526C0EA3BD1C05 /* NexmoVerify.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NexmoVerify/NexmoVerify-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NexmoVerify/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NexmoVerify/NexmoVerify.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = NexmoVerify;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7A156876A8824526ED495550DF098FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6F2DCB5A271B6A7307E188C4B22A026 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A1B9D8C0A2121D2098451D0A6F36295 /* Pods-NexmoBankingApp.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NexmoBankingApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NexmoBankingApp/Pods-NexmoBankingApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NexmoBankingApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F657F7EA2C9DC84965B452D3CA64616B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CCC1B7403A1629439EDC2109B4A2B22 /* Pods-NexmoBankingApp.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NexmoBankingApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NexmoBankingApp/Pods-NexmoBankingApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NexmoBankingApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		295F8805C04EF111A9579A741E16C1BE /* Build configuration list for PBXNativeTarget "NexmoVerify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				311F326AB199F6006CD80F988ADF3580 /* Debug */,
+				77CC56B32B9C31816D55F3A58E4ADC14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46EE69AF77A148AF92860F097B5698B1 /* Debug */,
+				7A156876A8824526ED495550DF098FA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF8F33E1F5ABF900D487A0648B15E594 /* Build configuration list for PBXNativeTarget "Pods-NexmoBankingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6F2DCB5A271B6A7307E188C4B22A026 /* Debug */,
+				F657F7EA2C9DC84965B452D3CA64616B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

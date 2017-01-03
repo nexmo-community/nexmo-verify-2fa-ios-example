@@ -13,15 +13,15 @@
 
 import UIKit
 import Parse
-import VerifyIosSdk
+import NexmoVerify
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
         
-    fileprivate var appID = "APP_ID"
-    fileprivate var sharedSecret = "SHARED_SECRET"
+    fileprivate var appID = "NEXMO-APP-ID"
+    fileprivate var sharedSecret = "NEXMO-SHARED-SECRET"
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         

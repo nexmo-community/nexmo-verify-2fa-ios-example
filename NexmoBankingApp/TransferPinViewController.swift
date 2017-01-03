@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 import Parse
-import VerifyIosSdk
+import NexmoVerify
 
 class TransferPinViewController:UIViewController {
     
