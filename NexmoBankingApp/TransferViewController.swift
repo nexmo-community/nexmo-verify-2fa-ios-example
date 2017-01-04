@@ -23,8 +23,8 @@ class TransferViewController:UIViewController {
         case 1:
             transferToText.text = "Checkings Account";
         default:
-            break; 
-        } 
+            break;
+        }
     }
     
     @IBAction func completeTransfer(_ sender: AnyObject) {
@@ -81,8 +81,8 @@ class TransferViewController:UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if PFUser.current() != nil {
-            checkingAmount = PFUser.current()!["checking"] as! Double
-            savingAmount = PFUser.current()!["saving"] as! Double
+            checkingAmount = PFUser.current()?["checking"] as! Double
+            savingAmount = PFUser.current()?["saving"] as! Double
             print("not nill")
         }
     }

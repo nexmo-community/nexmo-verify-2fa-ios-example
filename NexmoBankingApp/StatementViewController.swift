@@ -3,7 +3,7 @@ import UIKit
 import Parse
 
 class StatementViewController: UIViewController {
-    
+
     @IBAction func billPay(_ sender: AnyObject) { //UI Placeholder
         print("billpay")
         let alert = UIAlertView()
@@ -39,29 +39,26 @@ class StatementViewController: UIViewController {
     
     func logout() {
         if switchBoolValue == true {
-            if PFUser.current() != nil {
-                print(PFUser.current()!.value(forKey: "smsVerification") as! Bool)
+                print(PFUser.current()?.value(forKey: "smsVerification") as! Bool)
                 print("2fa true && switch on")
                 let alert = UIAlertController(title: "SMS Verification", message: "Perform SMS verification on login?", preferredStyle: .alert)
                 let defaultAction = UIAlertAction(title: "Continue", style: .default) {
                     UIAlertAction in
                     print("SMS TRUE sucessful logout")
-                    PFUser.current()!["smsVerification"] = true
-                    PFUser.current()!.saveInBackground()
-                    print(PFUser.current()!["smsVerification"] as! Bool)
+                    PFUser.current()?["smsVerification"] = true
+                    PFUser.current()?.saveInBackground()
                     self.performSegue(withIdentifier: "logoutUser", sender: self)
                 }
                 let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
                 alert.addAction(defaultAction)
                 alert.addAction(cancelAction)
                 self.present(alert, animated: true, completion: nil)
-            }
+    
         }
         else {
             print("SMS FALSE sucessful logout")
-            PFUser.current()!["smsVerification"] = false
-            PFUser.current()!.saveInBackground()
-            print(PFUser.current()!["smsVerification"] as! Bool)
+            PFUser.current()?["smsVerification"] = false
+            PFUser.current()?.saveInBackground()
             self.performSegue(withIdentifier: "logoutUser", sender: self)
         }
     }
@@ -69,12 +66,24 @@ class StatementViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkingAmount.text = "$\(String(Double(round(100*(PFUser.current()!["checking"] as! Double))/100)))"
-        savingAmount.text = "$\(String(Double(round(100*(PFUser.current()!["saving"] as! Double))/100)))"
-        switch2FA.addTarget(self, action: #selector(StatementViewController.switchMoved), for: UIControlEvents.valueChanged)
-        switchBoolValue = true
+
+
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        if (PFUser.current()?["saving"] == nil || PFUser.current()?["checking"] == nil) {
+            PFUser.logOut()
+            self.performSegue(withIdentifier: "logoutUser", sender: self)
+        }
+        else {
+            checkingAmount.text = "$\(String(Double(round(100*(PFUser.current()?["checking"] as! Double))/100)))"
+            savingAmount.text = "$\(String(Double(round(100*(PFUser.current()?["saving"] as! Double))/100)))"
+            switch2FA.addTarget(self, action: #selector(StatementViewController.switchMoved), for: UIControlEvents.valueChanged)
+            switchBoolValue = true
+        }
+
+    }
     func switchMoved() {
         if switch2FA.isOn {
             switchBoolValue = true

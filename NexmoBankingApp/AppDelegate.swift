@@ -1,3 +1,4 @@
+
 //
 //  AppDelegate.swift
 //  NexmoBankingApp
@@ -18,11 +19,9 @@ import NexmoVerify
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var window: UIWindow?
-        
-    fileprivate var appID = "NEXMO-APP-ID"
-    fileprivate var sharedSecret = "NEXMO-SHARED-SECRET"
-    
+    fileprivate var appID = "APP_ID"
+    fileprivate var sharedSecret = "SHARED_SECRET"
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let configuration = ParseClientConfiguration {
@@ -30,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             $0.clientKey = "BACK4APP_CLIENT_KEY"
             $0.server = "https://parseapi.back4app.com"
         }
+
         Parse.initialize(with: configuration)
         
         

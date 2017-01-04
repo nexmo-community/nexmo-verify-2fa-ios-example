@@ -10,6 +10,7 @@ class VerifyPinViewController: UIViewController, UITextFieldDelegate {
     var requestID:String!
 
     
+    
     @IBAction func verifyButton(_ sender: AnyObject) {
         if pinCode.text!.isEmpty {
             let alert = UIAlertController(title: "Enter Pin Code", message: "Please check your phone and enter the pin code send via SMS.", preferredStyle: .alert)
@@ -31,29 +32,36 @@ class VerifyPinViewController: UIViewController, UITextFieldDelegate {
         // Default: smsVerification == false unless SMS Verification was checked. 
         // At which point, the user must be verified.
         
-        VerifyClient.getVerifiedUser(countryCode: "US", phoneNumber: PFUser.current()!["phoneNumber"] as! String,
+        VerifyClient.getVerifiedUser(countryCode: "US", phoneNumber: PFUser.current()?["phoneNumber"] as! String,
             onVerifyInProgress: {
             },
             onUserVerified: {
                 self.performSegue(withIdentifier: "pinVerified", sender: self)
             },
             onError: { verifyError in
-                let alert = UIAlertController(title: "Unsucessful Identification", message: "Logging out. Goodbye.", preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "Goodbye", style: .default) {
-                    UIAlertAction in
-                        VerifyClient.cancelVerification() { error in
-                        if let error = error {
-                            // something wen't wrong whilst attempting to cancel the current verification request
-                            return
+                switch (verifyError) {
+                    case .invalidPinCode:
+                        UIAlertView(title: "Wrong Pin Code", message: "The pin code you entered is invalid.", delegate: nil, cancelButtonTitle: "Try again!").show()
+                    case .invalidCodeTooManyTimes:
+                        let alert = UIAlertController(title: "Unsucessful Identification", message: "Logging out. Goodbye.", preferredStyle: .alert)
+                        let defaultAction = UIAlertAction(title: "Goodbye", style: .default) {
+                            UIAlertAction in
+                            
+                            VerifyClient.cancelVerification() { error in
+                                if let error = error {
+                                    // something wen't wrong whilst attempting to cancel the current verification request
+                                    return
+                                }
+                            }
+                            self.performSegue(withIdentifier: "logout", sender: self)
                         }
-                    }
-                    self.performSegue(withIdentifier: "logout", sender: self)
-                    }
-                    alert.addAction(defaultAction)
-                    self.present(alert, animated: true, completion: nil)
+                        alert.addAction(defaultAction)
+                        self.present(alert, animated: true, completion: nil)
+                    default:
+                        print(verifyError.rawValue)
+                        break
+                }
         })
-        print((PFUser.current()!["smsVerification"] as AnyObject).boolValue)
-        
     }
         
     override func viewDidLoad() {

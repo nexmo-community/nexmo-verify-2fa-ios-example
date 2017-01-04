@@ -5,9 +5,8 @@ import LocalAuthentication
 import NexmoVerify
 
 class SitekeyViewController:UIViewController, UITextFieldDelegate {
-    
-    var sitekey:String!
     let alert = UIAlertView()
+    var sitekey:String!
 
     
     @IBAction func signInButton(_ sender: AnyObject) {
@@ -28,7 +27,7 @@ class SitekeyViewController:UIViewController, UITextFieldDelegate {
     @IBOutlet weak var pictureKeyImage: UIImageView!
     
     func continueWorkflow() {
-        if (PFUser.current()!["smsVerification"] as! Bool) {
+        if (PFUser.current()?["smsVerification"] as! Bool) {
             self.performSegue(withIdentifier: "verifyPin", sender:self)
         }
         else {
@@ -72,18 +71,18 @@ class SitekeyViewController:UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let sitekeyImage = PFUser.current()!["sitekey"] as! PFFile
-        sitekeyImage.getDataInBackground {
-            (imageData, error) -> Void in
-            if error == nil {
-                if let imageData = imageData {
-                    self.pictureKeyImage.image = UIImage(data:imageData)
+            let sitekeyImage = PFUser.current()?["sitekey"] as! PFFile
+            sitekeyImage.getDataInBackground {
+                (imageData, error) -> Void in
+                if error == nil {
+                    if let imageData = imageData {
+                        self.pictureKeyImage.image = UIImage(data:imageData)
+                    }
                 }
             }
-        }
+        
     }
 }
