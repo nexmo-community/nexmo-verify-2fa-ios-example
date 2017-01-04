@@ -355,7 +355,7 @@ override func viewDidLoad() {
 ```
 
 As shown above, call the function 'performTransfer' inside the 'onUserVerified' callback method. As we did in the previous verification view controller, call the 'checkPinCode' method inside your IBAction button to check the provided pin from the user.
-```swift
+```Swift
    @IBOutlet weak var pincode: UITextField!
    @IBAction func checkPin(sender: AnyObject) {
            VerifyClient.checkPinCode(pincode.text!)
