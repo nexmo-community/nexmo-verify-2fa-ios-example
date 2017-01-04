@@ -97,7 +97,8 @@ Next, let's add the Nexmo Verify SDK. The Verify SDK can be easily added to your
     pod init
     open Podfile
 ```
-``` Inside Podfile
+```
+# Inside Podfile
 # Uncomment this line to define a global platform for your project
 # platform :ios, '9.0'
 target 'NexmoBankingApp' do
