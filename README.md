@@ -118,7 +118,7 @@ Once the pod installation has completed, you are ready to dive into the code! To
 Now that we have our dependencies in place and attained the Nexmo app credentials, it's time to add them to your 'AppDelegate' file.
 
 In AppDelegate.swift:
-```
+```swift
 fileprivate var appID = "YOUR_NEXMO_APP_ID"
 fileprivate var sharedSecret = "YOUR_NEXMO_SHARED_SECRET"
 ```
@@ -126,7 +126,7 @@ fileprivate var sharedSecret = "YOUR_NEXMO_SHARED_SECRET"
 ###Initialize Nexmo Client
 
 Initialize the Nexmo Client inside the ‘didFinishLaunchingWithOptions’ function of the ‘AppDelegate’ file. Make sure not to commit any private keys or application ids (if you are publishing your apps on GitHub).
-```
+```swift
    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
            let configuration = ParseClientConfiguration {
    	   $0.applicationId = "BACK4APP_APP_ID"
@@ -145,7 +145,7 @@ On successful login, by providing Back4Apps with the username and password combi
 
 Let's handle the user pressing the sign in button and use Apple's LocalAuthentication API to prompt a Touch ID verification. If the device is not compatible with Touch ID (no fingerprint reader), using user skips the biometric verification. Add a segue ('signInStopped'), for if the user is unable to successfully pass the Touch ID verification, which logs the user out and returns them to the login page. Based on if the user’s SMS verification preference setting, the continue workflow function will trigger a verification request after segueing to the pin verification screen (which we create next) or show the user’s account page.
 You can see the code already written in the `SiteKeyViewController.swift`:
-```
+```swift
 @IBAction func signInButton(_ sender: AnyObject) {
     initialWorkFlow()
 }
@@ -192,7 +192,7 @@ func continueWorkflow() {
 Add a view controller to your project (‘VerifyPinViewController’) and create a view controller in the Storyboard using the Interface Builder.  Next, add a text box outlet along with a button outlet to submit the pin code. Create a segue (‘verifyPin’) that is connected to the 'SitekeyViewController' & the newly created view controller.
 
 Inside the ‘viewDidAppear’ method of the newly added view controller, call the function below.
-```
+```swift
    override func viewDidAppear(animated: Bool) {
            super.viewDidAppear(true)
            let alert = UIAlertController(  title: "User Phone Verification", message: "Your identity is being verified.", preferredStyle: .alert)
@@ -206,8 +206,7 @@ Inside the ‘viewDidAppear’ method of the newly added view controller, call t
 ```
 
 Grab the user’s phone number from the Back4Apps database and trigger a verification request using the getVerifiedUser() method.
-
-```
+```swift
    func verifyUser() {
                VerifyClient.getVerifiedUser(countryCode: "US", phoneNumber: PFUser.currentUser()?["phoneNumber"] as! String,
                    onVerifyInProgress: {
@@ -261,9 +260,7 @@ Also, call the ‘checkPinCode’ method provided by the Nexmo client when the b
 ###Add option for SMS verification on login
 
 Next, add the logic that allows the user to enable SMS verification. Add a switch UI element to your ‘StatementViewController.swift’. Also, add a Boolean variable to hold the value of the switch. When the user logs out of the account, the value of the switch is stored in the database. If the switch was toggled on, a SMS verification will be triggered on the next login. After the view appears, check the values for the checking and savings account to validate they are not nil.
-
-
-```
+```swift
    @IBOutlet weak var switch2FA: UISwitch!
    var switchBoolValue:Bool!
    func logout() {
@@ -319,8 +316,7 @@ Next, add the logic that allows the user to enable SMS verification. Add a switc
 For more secure transaction, such as a user transferring from one account to another, you can trigger a verification request to confirm the user request action. Using the ‘getVerifiedUser’ method, the user will receive an pin code via SMS. Add a new controller ('TransferPinViewController') with a text field and a button in the storyboard file. Create an IBOutlet for the user supplied pin code (text field) and an IBAction for the Verify button.
 
 Create a function that calls ‘getVerifiedUser’ method to initiate the user verification. This function should be called when the view loads.
-
-```
+```swift
 override func viewDidLoad() {
       super.viewDidLoad()
       verify()
@@ -359,8 +355,7 @@ override func viewDidLoad() {
 ```
 
 As shown above, call the function 'performTransfer' inside the 'onUserVerified' callback method. As we did in the previous verification view controller, call the 'checkPinCode' method inside your IBAction button to check the provided pin from the user.
-
-```
+```swift
    @IBOutlet weak var pincode: UITextField!
    @IBAction func checkPin(sender: AnyObject) {
            VerifyClient.checkPinCode(pincode.text!)
