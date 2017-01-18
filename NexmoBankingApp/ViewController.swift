@@ -14,35 +14,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    
-    func signUpDemoAccount() {
-        let user = PFUser()
-        user.username = "ENTERUSERNAME"
-        user.password = "ENTERPASSWORD"
-        user.email = "ENTEREMAILADDRESS@DEMO.NET"
-        user["phoneNumber"] = "ENTER-YOUR-PHONE-HERE"
-        user["smsVerification"] = false
-        user["checking"] = 5000
-        user["saving"] = 10000
-        let sitekeyImage = UIImage(named: "nexmo.png")
-        let imageData = UIImagePNGRepresentation(sitekeyImage!)
-        let imageFile = PFFile(name:"nexmo.png", data:imageData!)
-        user["sitekey"] = imageFile
-        user.signUpInBackground {
-            (sucess, error) -> Void in
-            if !sucess {
-                print(error.debugDescription)
-            } else {
-                print("User signed up.")
-            }
-        }
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.onlineID.delegate = self
-        //signUpDemoAccount() //Uncomment to create dummy user
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
