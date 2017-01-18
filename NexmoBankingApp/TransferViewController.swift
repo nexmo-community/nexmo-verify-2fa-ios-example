@@ -9,7 +9,6 @@ class TransferViewController:UIViewController {
     var transferAmt:Double!
     var currentUser:PFUser!
     var transferSource:String!
-    var newBalance:String!
     var afterTransferTotal:Double!
     
     @IBOutlet weak var transferAmount: UITextField!
