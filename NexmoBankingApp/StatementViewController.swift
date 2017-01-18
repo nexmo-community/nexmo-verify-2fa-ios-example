@@ -66,8 +66,8 @@ class StatementViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        checkingAmount.text = "$\(String(Double(round(100*(PFUser.current()?["checking"] as! Double))/100)))"
+        savingAmount.text = "$\(String(Double(round(100*(PFUser.current()?["saving"] as! Double))/100)))"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -77,8 +77,6 @@ class StatementViewController: UIViewController {
             self.performSegue(withIdentifier: "logoutUser", sender: self)
         }
         else {
-            checkingAmount.text = "$\(String(Double(round(100*(PFUser.current()?["checking"] as! Double))/100)))"
-            savingAmount.text = "$\(String(Double(round(100*(PFUser.current()?["saving"] as! Double))/100)))"
             switch2FA.addTarget(self, action: #selector(StatementViewController.switchMoved), for: UIControlEvents.valueChanged)
             switchBoolValue = true
         }
