@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.onlineID.delegate = self
-    
+        self.password.delegate = self
         /* signUpDemoAccount() //Uncomment to create dummy user */
     }
     override func didReceiveMemoryWarning() {

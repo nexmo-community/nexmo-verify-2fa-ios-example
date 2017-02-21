@@ -4,24 +4,6 @@ import Parse
 
 class StatementViewController: UIViewController {
 
-    @IBAction func billPay(_ sender: AnyObject) { //UI Placeholder
-        print("billpay")
-        let alert = UIAlertView()
-        alert.title = "Incorrect Choice"
-        alert.message = "The selection you have selected has not been configured with this demo application."
-        alert.addButton(withTitle: "Back")
-        alert.show()
-    }
-    
-    @IBAction func deposits(_ sender: AnyObject) { //UI Placeholder
-        print("deposits")
-        let alert = UIAlertView()
-        alert.title = "Incorrect Choice"
-        alert.message = "The selection you have selected has not been configured with this demo application."
-        alert.addButton(withTitle: "Back")
-        alert.show()
-    }
-    
     @IBOutlet weak var switch2FA: UISwitch!
     var switchBoolValue:Bool!
 
@@ -66,8 +48,6 @@ class StatementViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkingAmount.text = "$\(String(Double(round(100*(PFUser.current()?["checking"] as! Double))/100)))"
-        savingAmount.text = "$\(String(Double(round(100*(PFUser.current()?["saving"] as! Double))/100)))"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -79,6 +59,8 @@ class StatementViewController: UIViewController {
         else {
             switch2FA.addTarget(self, action: #selector(StatementViewController.switchMoved), for: UIControlEvents.valueChanged)
             switchBoolValue = true
+            checkingAmount.text = "$\(String(Double(round(100*(PFUser.current()?["checking"] as! Double))/100)))"
+            savingAmount.text = "$\(String(Double(round(100*(PFUser.current()?["saving"] as! Double))/100)))"
         }
 
     }

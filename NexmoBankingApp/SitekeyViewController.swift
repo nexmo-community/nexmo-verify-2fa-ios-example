@@ -74,6 +74,7 @@ class SitekeyViewController:UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
             let sitekeyImage = PFUser.current()?["sitekey"] as! PFFile
             sitekeyImage.getDataInBackground {
                 (imageData, error) -> Void in
@@ -83,6 +84,7 @@ class SitekeyViewController:UIViewController, UITextFieldDelegate {
                     }
                 }
             }
+ 
         
     }
 }

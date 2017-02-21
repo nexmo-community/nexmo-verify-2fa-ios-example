@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NexmoBankingApp/StatementViewController.swift"
-            timestampString = "505208549.845793"
+            timestampString = "509327191.921776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "logout()"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NexmoBankingApp/StatementViewController.swift"
-            timestampString = "505208549.845793"
+            timestampString = "509327191.921776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "logout()"
             landmarkType = "7">
          </BreakpointContent>

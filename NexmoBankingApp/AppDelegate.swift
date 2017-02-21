@@ -19,9 +19,11 @@ import NexmoVerify
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    fileprivate var appID = "APP_ID"
-    fileprivate var sharedSecret = "SHARED_SECRET"
+    var window: UIWindow?
 
+    fileprivate var appID = "NEXMO-APP-ID"
+    fileprivate var sharedSecret = "NEXMO-SHARED-SECRET"
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let configuration = ParseClientConfiguration {

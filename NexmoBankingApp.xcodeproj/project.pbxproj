@@ -219,7 +219,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Sidharth Sharma";
 				TargetAttributes = {
 					1F4A851B1C53063A00C6ACA1 = {
@@ -455,7 +455,7 @@
 				INFOPLIST_FILE = NexmoBankingApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nexmo.BankingDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.siDarthVader.NexmoBankingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "NexmoBankingApp/NexmoBankingApp-Bridging-Header.h";
@@ -481,7 +481,7 @@
 				INFOPLIST_FILE = NexmoBankingApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nexmo.BankingDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.siDarthVader.NexmoBankingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "NexmoBankingApp/NexmoBankingApp-Bridging-Header.h";
