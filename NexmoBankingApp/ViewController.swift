@@ -36,8 +36,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         user.email = "ENTEREMAILADDRESS@DEMO.NET"
         user["phoneNumber"] = "ENTER-YOUR-PHONE-HERE"
         user["smsVerification"] = false
-        user["checkingAccount"] = 5000
-        user["savingAccount"] = 10000
+        user["checking"] = 5000
+        user["saving"] = 10000
         let sitekeyImage = UIImage(named: "nexmo.png")
         let imageData = UIImagePNGRepresentation(sitekeyImage!)
         let imageFile = PFFile(name:"nexmo.png", data:imageData!)
