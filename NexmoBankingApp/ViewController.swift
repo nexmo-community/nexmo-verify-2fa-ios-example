@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //signUpDemoAccount()
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,4 +28,28 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return false
     }
+    
+    func signUpDemoAccount() {
+        let user = PFUser()
+        user.username = "ENTERUSERNAME"
+        user.password = "ENTERPASSWORD"
+        user.email = "ENTEREMAILADDRESS@DEMO.NET"
+        user["phoneNumber"] = "ENTER-YOUR-PHONE-HERE"
+        user["smsVerification"] = false
+        user["checkingAccount"] = 5000
+        user["savingAccount"] = 10000
+        let sitekeyImage = UIImage(named: "nexmo.png")
+        let imageData = UIImagePNGRepresentation(sitekeyImage!)
+        let imageFile = PFFile(name:"nexmo.png", data:imageData!)
+        user["sitekey"] = imageFile
+        user.signUpInBackground {
+            (success, error) -> Void in
+            if !success {
+                print(error.debugDescription)
+            } else {
+                print("User signed up.")
+            }
+        }
+}
+
 }
